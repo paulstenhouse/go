@@ -1,0 +1,21 @@
+name = "go"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Database configuration
+[[d1_databases]]
+binding = "GO_LINKS"
+database_name = "go"
+database_id = "341ef94d-94cd-4cce-8b67-3e63ccd86979"
+
+# Environment variables
+[vars]
+ADMIN_KEY = "5ecret-1lgin"
+DEFAULT_REDIRECT = "https://www.example.com"
+DEFAULT_TIMEZONE = "America/New_York"
+
+# Rate limiting configuration
+RATE_LIMIT_MAX_ATTEMPTS = "10"        # Max failed auth attempts per window
+RATE_LIMIT_WINDOW_MINUTES = "15"     # Time window in minutes
+RATE_LIMIT_BLOCK_DURATION_MINUTES = "60"  # How long to block after exceeding limit
